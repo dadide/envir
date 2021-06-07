@@ -1,0 +1,28 @@
+FROM ubuntu:20.04
+
+RUN apt-get update -y
+RUN apt-get install -y python3-pip 
+RUN pip3 install --upgrade pip
+
+RUN apt-get install -y python3-dev
+RUN pip3 install oss2
+
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y install tzdata
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN dpkg-reconfigure -f noninteractive tzdata
+
+ADD IVHM.tar.gz ./IVHM
+
+WORKDIR /IVHM
+RUN chmod +x runpyfinal.sh
+ENTRYPOINT ["/IVHM/runpyfinal.sh"]
+
+#sudo docker build -f df22 -t testali:1.0 .
+#/home/efc/SAICSJTU:/IVHM,/dev/bus/usb/001/002:/dev/bus/usb/001/002
+
+
+
+
+
+
