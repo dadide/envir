@@ -6,6 +6,7 @@ RUN pip3 install --upgrade pip
 
 RUN apt-get install -y python3-dev
 RUN pip3 install oss2
+RUN pip3 install serial
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y install tzdata
@@ -18,7 +19,7 @@ WORKDIR /IVHM
 RUN chmod +x runpyfinal.sh
 ENTRYPOINT ["/IVHM/runpyfinal.sh"]
 
-#sudo docker build -f df22 -t testali:1.0 .
+#sudo docker build -f df22 -t testdev:1.0 .
 #/home/efc/SAICSJTU:/IVHM,/dev/bus/usb/001/002:/dev/bus/usb/001/002
 
 
