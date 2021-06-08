@@ -20,10 +20,8 @@ RUN chmod +x runpyfinal.sh
 ENTRYPOINT ["/IVHM/runpyfinal.sh"]
 
 RUN pip3 install pyserial
-
-#sudo docker build -f df22 -t testdev:1.0 .
-#/home/efc/SAICSJTU:/IVHM,/dev/bus/usb/001/002:/dev/bus/usb/001/002
-
+RUN pip3 install numpy
+RUN pip3 install cantools
 
 
 
