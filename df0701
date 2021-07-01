@@ -17,6 +17,8 @@ RUN pip3 install pyserial
 RUN pip3 install numpy
 RUN pip3 install cantools
 
+ENTRYPOINT ["/bin/bash"]
+
 
 
 
