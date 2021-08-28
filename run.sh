@@ -17,5 +17,10 @@ cd /home/wy/df/0608
 cp /home/wy/newIVHM/zlgminiCAN/IVHM.tar.gz /home/wy/df/0714
 git add .
 git commit -m 'new'
+<<<<<<< HEAD
 git pull origin master
 git push origin master
+=======
+git pull origin main
+git push origin main
+>>>>>>> 852c8035fcda6229ae5b235e8d2e7a84fa497fae
